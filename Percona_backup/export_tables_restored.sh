@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configurazione
-DB_NAME="redmine_002_restore" 
-OUTPUT_FILE="/opt/gal-script/restore_db/elenco_tabelle_1.txt" LOGIN_PATH="backupconn" # Sostituisci con il nome del tuo login path
+DB_NAME="db_name_restore" 
+OUTPUT_FILE="/path/output_file_1.txt" LOGIN_PATH="login_file_path" # Sostituisci con il nome del tuo login path
 
 # Trova tutte le tabelle nel database e esegui DISCARD TABLESPACE
 mysql --login-path=$LOGIN_PATH -e "USE $DB_NAME; SELECT table_name FROM information_schema.tables WHERE table_schema='$DB_NAME'" | tail -n +2 > "$OUTPUT_FILE"
