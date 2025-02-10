@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configurazione
-DB_NAME="redmine_002"
-INPUT_FILE="/opt/gal-script/restore_db/elenco_tabelle.txt"
+DB_NAME="db_name"
+INPUT_FILE="/path/output_file.txt"
 LOGIN_PATH="backupconn"  # Sostituisci con il nome del tuo login path
 SQL_SCRIPT="/tmp/import_tablespace_script.sql"
 
