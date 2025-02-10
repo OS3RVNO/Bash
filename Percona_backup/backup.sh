@@ -20,7 +20,7 @@ perform_full_backup() {
   
   create_directory "$target_dir"
   
-  xtrabackup --login-path="backupconn" --backup --target-dir="$target_dir" --export --databases="$db" >> "$LOG_FILE" 2>&1
+  xtrabackup --login-path="login_file_path" --backup --target-dir="$target_dir" --export --databases="$db" >> "$LOG_FILE" 2>&1
 }
 
 # Funzione per eseguire il primo backup incrementale
@@ -31,7 +31,7 @@ perform_first_incremental_backup() {
 
   create_directory "$target_dir"
 
-  xtrabackup --login-path="backupconn" --backup --target-dir="$target_dir" --export --databases="$db" --incremental-basedir="$full_backup_dir" >> "$LOG_FILE" 2>&1
+  xtrabackup --login-path="login_file_path" --backup --target-dir="$target_dir" --export --databases="$db" --incremental-basedir="$full_backup_dir" >> "$LOG_FILE" 2>&1
 }
 
 # Funzione per eseguire gli incrementali successivi al primo
@@ -43,7 +43,7 @@ perform_subsequent_incremental_backup() {
 
   create_directory "$target_dir"
 
-  xtrabackup --login-path="backupconn" --backup --target-dir="$target_dir" --export --databases="$db" --incremental-basedir="$previous_incremental_dir" >> "$LOG_FILE" 2>&1
+  xtrabackup --login-path="login_file_path" --backup --target-dir="$target_dir" --export --databases="$db" --incremental-basedir="$previous_incremental_dir" >> "$LOG_FILE" 2>&1
 }
 
 # Verifica i parametri
