@@ -51,11 +51,11 @@ Effettuato il caricamento del dump, eseguire "export_tables_restored.sh" (creato
 
 Questo script, creerà un file .txt che potremo ignorare, o eventualmente tenere per un confronto.
 
-Copiare i file del database dal backup full nella cartella del nuovo database creato(db destinazione), ad es. "/var/lib/mysql/redmine_002_restored"
+Copiare i file del database dal backup full nella cartella del nuovo database creato(db destinazione), ad es. "/var/lib/mysql/db_name_restored"
 
 Effettuare cambiamento permessi utente/gruppo "chown -R /var/lib/mysql"
 
-ATTENZIONE: attualmente lo script prende in riferimento il file .txt "elenco_tabelle.txt", questo file contiene le tabelle del db sorgente, il db da ripristinare nel nostro caso.
+ATTENZIONE: attualmente lo script prende in riferimento il file .txt "output_file.txt", questo file contiene le tabelle del db sorgente, il db da ripristinare nel nostro caso.
 
 Valutare di volta in volta il contenuto di questo file.
 
