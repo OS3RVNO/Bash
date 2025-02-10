@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configurazioni
-DATABASES=("redmine_002")  # Aggiungi i tuoi nomi di database
-BACKUP_DIR="/opt/gal-script/test"
+DATABASES=("db_name")  # Aggiungi i tuoi nomi di database
+BACKUP_DIR="/path/"
 LOG_FILE="$BACKUP_DIR/backup.log"
 
 # Funzione per creare la cartella se non esiste
